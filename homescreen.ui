@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HomeScreen</class>
+ <widget class="QWidget" name="HomeScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1220</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QFrame#frame
+{
+	
+	/*background-color: rgb(58, 255, 249);*/
+	
+	border-image:url(:/res/background/bg3.jpg);		/*背景大小会自适应窗口大小*/
+/*
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+*/
+	border-radius:10px;
+
+}
+
+QPushButton#btn_max
+{
+	background-image: url(:/res/rightTop/max.png);	/*背景图片会以原大小显示，不会自动适应窗口大小*/
+}
+QPushButton#btn_min
+{
+	background-image: url(:/res/rightTop/min.png);
+}
+QPushButton#btn_quit
+{
+	background-image: url(:/res/rightTop/quit.png);
+	
+}
+
+QPushButton#btn_menu
+{
+	background-image: url(:/res/rightTop/menu.png);
+}
+
+/* QPushButton#btn_max,QPushButton#btn_min,QPushButton#btn_quit,QPushButton#btn_menu
+{
+	background-repeat:no-repeat;	
+	border:none;						
+	background-position:center;			
+
+} */
+QPushButton
+{
+    background-repeat:no-repeat;	
+	border:none;						
+	background-position:center;	
+	width:32px;
+	height:32px;
+}
+
+/*hover*/
+QPushButton#btn_quit:hover
+{
+	background-color:rgb(230,0,0);
+}
+QPushButton#btn_max:hover,QPushButton#btn_min:hover,QPushButton#btn_menu:hover
+{
+	background-color: rgba(255, 255, 255,100);
+}
+/*查找按钮*/
+QPushButton#btn_search
+{
+    background-image: url(://res/smallImage/sereach.png);
+    border:none;
+    background-repeat: no-repeat;
+  	background-position: center;
+}
+/*搜索框*/
+QLineEdit#lineEdit_search
+{
+    border: none;
+	border-radius: 5px;
+	background-color: rgba(179,226,239,250);
+
+    font:bold 14px;
+    color:black;
+    padding:6px;
+}
+QPushButton#btn_search:hover
+{
+    background-image: url(:/res/smallImage-hover/sereach-hover.png);
+}
+
+/*底部按钮样式*/
+QWidget#bottom_widget
+{
+	background-color: rgba(144, 144, 144,150);
+}
+/* QPushButton#btn_preSong,QPushButton#btn_play,QPushButton#btn_nextSong,
+QPushButton#btn_like,QPushButton#btn_loop,QPushButton#btn_location,
+QPushButton#btn_playList,QPushButton#btn_volume
+{
+    border:none;
+	width: 32px;
+    height: 32px;
+
+
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+QPushButton#btn_preSong
+{
+    background-image: url(://res/smallImage/pre.png);
+}
+QPushButton#btn_preSong:hover
+{
+    background-image: url(://res/smallImage-hover/pre-hover.png);
+}
+
+QPushButton#btn_play
+{
+    background-image: url(://res/smallImage/pase.png);
+}
+QPushButton#btn_play:hover
+{
+    background-image: url(://res/smallImage-hover/pase-hover.png);
+}
+
+QPushButton#btn_nextSong
+{
+    background-image: url(://res/smallImage/next.png);
+}
+QPushButton#btn_nextSong:hover
+{
+    background-image: url(://res/smallImage-hover/next-hover.png);
+}
+
+QPushButton#btn_like
+{
+    background-image: url(://res/smallImage/like.png);
+}
+QPushButton#btn_like:hover
+{
+    background-image: url(://res/smallImage-hover/like-hover.png);
+}
+
+
+QPushButton#btn_loop
+{
+    background-image: url(://res/smallImage/loop.png);
+}
+QPushButton#btn_loop:hover
+{
+    background-image: url(://res/smallImage-hover/loop-hover.png);
+}
+
+QPushButton#btn_location
+{
+    background-image: url(://res/smallImage/location.png);
+}
+QPushButton#btn_location:hover
+{
+    background-image: url(://res/smallImage-hover/location-hover.png);
+}
+
+QPushButton#btn_playList
+{
+    background-image: url(://res/smallImage/playlist.png);
+}
+QPushButton#btn_playList:hover
+{
+    background-image: url(://res/smallImage-hover/playlist-hover.png);
+}
+
+QPushButton#btn_volume
+{
+    background-image: url(://res/smallImage/music-voice.png);
+}
+QPushButton#btn_volume:hover
+{
+    background-image: url(://res/smallImage-hover/music-voice-hover.png);
+}
+
+/********左边栏********/
+QPushButton#btn_list_l
+{
+    background-image: url(://res/smallImage/music.png);
+}
+QPushButton#btn_like_l
+{
+    background-image: url(://res/smallImage/Ilike.png);
+}
+QPushButton#btn_hide_l
+{
+    background-image: url(://res/smallImage/left.png);
+}
+
+QPushButton#btn_list_l:hover
+{
+    background-image: url(://res/smallImage-hover/music-hover.png);
+}
+QPushButton#btn_like_l:hover
+{
+    background-image: url(://res/smallImage-hover/Ilike-hover.png);
+}
+QPushButton#btn_hide_l:hover
+{
+    background-image: url(://res/smallImage-hover/left-hover.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="1">
+    <widget class="QFrame" name="frame">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QPushButton" name="btn_quit">
+      <property name="geometry">
+       <rect>
+        <x>1159</x>
+        <y>0</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_max">
+      <property name="geometry">
+       <rect>
+        <x>1123</x>
+        <y>0</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_min">
+      <property name="geometry">
+       <rect>
+        <x>1087</x>
+        <y>0</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_menu">
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>0</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="bottom_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>670</y>
+        <width>820</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QPushButton" name="btn_preSong">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_play">
+       <property name="geometry">
+        <rect>
+         <x>73</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_nextSong">
+       <property name="geometry">
+        <rect>
+         <x>137</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_location">
+       <property name="geometry">
+        <rect>
+         <x>699</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_playList">
+       <property name="geometry">
+        <rect>
+         <x>737</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_volume">
+       <property name="geometry">
+        <rect>
+         <x>775</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_loop">
+       <property name="geometry">
+        <rect>
+         <x>661</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="geometry">
+        <rect>
+         <x>221</x>
+         <y>14</y>
+         <width>350</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>350</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>350</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_like">
+       <property name="geometry">
+        <rect>
+         <x>623</x>
+         <y>9</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>140</y>
+        <width>350</width>
+        <height>530</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="page_list"/>
+      <widget class="QWidget" name="page_like"/>
+      <widget class="QWidget" name="page_hide"/>
+     </widget>
+     <widget class="QPushButton" name="btn_list_l">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_like_l">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>100</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_hide_l">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>100</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_search">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>30</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>输入歌曲或歌手</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_search">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>30</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
